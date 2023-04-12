@@ -1,15 +1,22 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Home from './pages/Home';
+// import Home from './pages/Home';
+// import About from './pages/About';
+// import Card from './pages/Card';
+// import Error from './pages/Error';
+import Navbar from './components/Navbar';
+import Banner from './components/Banner';
+import Apartment from './components/Apartment';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      <h1>Hello World</h1>
-      <Home/>
-      </header>
+    <div >
+     <Navbar/>
+     <Banner/>
+     <Apartment/>
+     <Footer/>
+  
     </div>
   );
 }

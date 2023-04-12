@@ -1,0 +1,21 @@
+.banner{
+    margin-top: 30px;
+    height: 223px;
+    max-width: auto;
+    border-radius: 25px;
+    box-shadow: 0px 5px 15px rgb(66, 58, 58);
+    margin : 40px;
+    background-image: url( ../assets/Banner.png);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    filter : brightness(80%)
+}
+
+.banner h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+}
