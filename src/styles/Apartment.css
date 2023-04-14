@@ -9,10 +9,13 @@
     border-radius: 5rem;
     margin:40px;
 }
-
+.apartmentTittle{
+    flex-grow: 1;
+}
 .apartmentTittle h1{
     font-weight: 800;
     margin:40px;
+    margin-block: 0;
 }
 .apartmentTittle h2{
     font-weight: bold;
@@ -20,6 +23,16 @@
 }
 .apartementHeader{
     display: flex;
+    
+}
+.apartementHeader > *{
+    border: 1px solid black;
+}
+.apartmentOwner{
+    margin-left: auto;
+}
+.apartmentOwner h3{
+    margin-block: 0;
 }
 .apartmentTags{
     display: grid;
