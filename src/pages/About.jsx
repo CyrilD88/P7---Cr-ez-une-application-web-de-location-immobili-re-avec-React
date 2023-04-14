@@ -1,11 +1,19 @@
 import React from 'react';
 
-function Home (){
+import Banner from "../components/Banner";
+
+
+function About (){
     return (
-        <div>
-            About Works !
+        <div className='About'>
+         
+           <Banner/>
+           <div>
+            Ici mettre le reste About
+           </div>
+          
         </div>
     )
 };
 
-export default Home;
+export default About;
