@@ -2,7 +2,7 @@ import React from 'react';
 // import Banner from '../components/Banner'
 import "../styles/Apartment.css"
 
-function Card (){
+function  Apartment(){
     return (
         <div className='apartmentPage'>
         <img src="https://picsum.photos/200/300" alt='photoAppartement'/>
@@ -42,5 +42,5 @@ function Card (){
     )
 };
 
-export default Card;
+export default Apartment;
 
