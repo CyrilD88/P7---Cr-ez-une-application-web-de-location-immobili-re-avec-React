@@ -6,7 +6,7 @@ import "../styles/Card.css";
 function ApartmentCards() {
   return (
     <div className="housing"> 
-     <Link to='Card'> 
+     <Link to='Apartment'> 
              <div className="housing__card">
                  <img src={AppartementCard} alt="a mettre"/>
                  <h3>Titre de la location</h3>
