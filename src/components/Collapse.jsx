@@ -25,7 +25,7 @@ function Collapse({title, content}) {
             <div className='collapse__header' onClick={affContent}>
                 <span>{title}</span>
                 <div className="chevronValue">
-                    <img src={collapseChevron} alt=""/>
+                    <img src={collapseChevron} alt="image_de_chevron"/>
                 </div>
             </div>
 
