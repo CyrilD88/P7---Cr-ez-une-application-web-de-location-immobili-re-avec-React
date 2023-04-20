@@ -30,9 +30,9 @@ function Card() {
     
 
     return (
+        <div className="main">
         <div className='logement'>
         
-               
 
                 {/* carousel d'images */}
                 <Carousel pictures={record.pictures}/>
@@ -76,8 +76,8 @@ function Card() {
                     <Collapse title="Equipements" content={equipements} />
                 </div>
 
-     
            
+        </div>
         </div>
     )
 }

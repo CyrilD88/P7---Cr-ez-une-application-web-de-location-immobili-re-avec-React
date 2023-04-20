@@ -1,14 +1,13 @@
 .footer{
     position: relative;
-    bottom: 0px;
-    height: 150px;
+    bottom: 0;
+    width: 100%;
     background-color: #000000;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    width: 100%;
+    margin-top: auto;
     text-align: center;
     padding-top: 20px;
 }
