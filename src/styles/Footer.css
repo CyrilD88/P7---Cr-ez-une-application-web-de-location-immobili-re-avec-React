@@ -14,4 +14,17 @@
 
 .footer p{
     color: white;
+    margin-top: 10px;
+}
+
+
+/* média queries */
+
+@media (max-width: 768px){
+    .footer img{
+        height: 22px;
+    }
+    .footer p{
+        height: 18px;
+    }
 }

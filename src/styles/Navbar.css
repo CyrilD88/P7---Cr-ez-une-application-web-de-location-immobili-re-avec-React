@@ -31,11 +31,26 @@
     color: #FF6060;
     cursor: pointer;
     font-size: 22px;
-    font-family: RO;
+    
 }
 .navbar a :hover {
     text-decoration: underline;
     /* text-decoration-thickness: 0.1em;  mettre le lien plus épais */
     color: #FF6060;
     
+}
+
+
+
+
+/* média queries */
+
+@media (max-width: 768px){
+    .navbar a{
+        font-size: 18px;
+    }
+    .navbar img{
+        height: 24px;
+    }
+
 }
