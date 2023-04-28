@@ -6,23 +6,23 @@ import "../styles/Collapse.css"
 
 
 function Collapse({title, content}) {
-    // défini le collapse par défaut comme fermé
-    const [contentVisible, setContentVisible] = useState(false)
+    //  le collapse est définit par défaut comme fermé
+    const [collapseVisible, setcollpseVisible] = useState(false)
 
-    // à chaque clic sur le collapse, ca inverse la valeur pour le ouvert/fermé
-    const affContent = () => { 
-        setContentVisible(!contentVisible) // inverse la valeur actuelle
+    // au clique sur le collapse, la valeur est inversée 
+    const affichageCollapse = () => { 
+        setcollpseVisible(!collapseVisible) // inverse la valeur actuelle
     }
 
-    // défini les classes selon si c'est visible ou caché, idem pour le chevron
-    const collapseContent = (contentVisible ? "visible" : "hidden") + " collapse"
-    const collapseChevron = (contentVisible ? chevronUp : chevronDown)
+    // définition des classes et du chevron: visible ou caché
+    const collapseContent = (collapseVisible ? "visible" : "hidden") + " collapse"
+    const collapseChevron = (collapseVisible ? chevronUp : chevronDown)
 
     return (
         <div className='collapse'>
 
             {/* affiche le titre et le chevron */}
-            <div className='collapse__header' onClick={affContent}>
+            <div className='collapse__header' onClick={affichageCollapse}>
                 <span>{title}</span>
                 <div className="chevronValue">
                     <img src={collapseChevron} alt="image_de_chevron"/>
@@ -38,3 +38,5 @@ function Collapse({title, content}) {
 }
 
 export default Collapse
+
+

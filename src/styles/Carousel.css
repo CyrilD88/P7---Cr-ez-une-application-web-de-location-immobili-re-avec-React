@@ -15,7 +15,7 @@
     text-shadow: 0px 0px 5px black;
 }
 
-.classImage {
+.firstImage {
     position: absolute;
     content: "";
     height: 100%;
@@ -53,3 +53,23 @@
 }
 
 
+
+/* média queries */
+
+@media (max-width: 768px){
+
+    .compteurImages{
+        visibility: hidden;
+    }
+    .classChevronGauche{
+        height: 30px;
+        top:50%;
+    }
+    .classChevronDroit{
+        height: 30px;
+        top:50%;
+        left: calc(100% - 20px);
+    }
+    
+    
+    }

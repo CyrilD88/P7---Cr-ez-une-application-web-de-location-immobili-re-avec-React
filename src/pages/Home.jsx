@@ -2,9 +2,6 @@ import React from 'react'
 import Banner from '../components/Banner'
 import ApartmentCards from '../components/Card' 
 
-
-
-
 import "../styles/Home.css"
 
 function Home() {
@@ -25,3 +22,9 @@ function Home() {
 }
 
 export default Home
+
+
+
+
+
+

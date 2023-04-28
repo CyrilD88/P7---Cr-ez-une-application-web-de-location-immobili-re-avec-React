@@ -1,10 +1,10 @@
-import '../styles/Title.css'
+// import '../styles/Title.css'
 
-export default function Title({ title, location }) {
-  return (
-    <>
-      <h1 className="title-apart">{title}</h1>
-      <h3 className="location">{location}</h3>
-    </>
-  )
-}
+// export default function Title({ title, location }) {
+//   return (
+//     <>
+//       <h1 className="title-apart">{title}</h1>
+//       <h3 className="location">{location}</h3>
+//     </>
+//   )
+// }

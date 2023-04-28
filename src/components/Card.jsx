@@ -7,15 +7,15 @@ import "../styles/Card.css";
 function ApartmentCards() {
   return (
    
-    <div className="logements">
+    <div className="LogementsCard">
 
-    {/* liste la base de données */}
+    {/* création de la liste pour la base de données */}
     {Data.map((apart) => {
         const { id, cover, title } = apart;
 
-        // affiche la fiche logement sur la page d'accueil
+        // affichage de  la fiche logement sur la page d'accueil
         return (
-            <div className="fiche-logement" key={id}>
+            <div className="Logement" key={id}>
                 <Link to={{ pathname: "Apartment", search: "?_id="+id }}>
                     <img src={cover} alt={title} />
                     <h3>{title}</h3>

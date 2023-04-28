@@ -1,10 +1,6 @@
 import React, { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
-
-
-
-
 import Collapse from '../components/Collapse'
 import Carousel from '../components/Carousel'
 
@@ -14,35 +10,38 @@ import Data from "../Données.json"
 const arrayStars = [1, 2, 3, 4, 5]
 
 function Card() {
-    // récupère l'ID de l'URL
+    // récupération des paramètres
     const [searchParams] = useSearchParams();
-    const [idLogement] = useState(searchParams.get('_id'));
+
+     // récupération de l'ID de l'URL
+    const [apartmentID,] = useState(searchParams.get('_id'));
     
-    // cherche l'id dans le fichier logements.json
-    const record = Data.find(element => element.id === idLogement)
+
+    // On recherche l'id dans le fichier logements.json
+    const record = Data.find(element => element.id === apartmentID)
     
    
 
-    // test l'utilisation de useMemo
+    // Const pour maper les équipements
     const equipements = record.equipments.map((element, index) => (
-          <li className='description-content' key={"equip-"+index.toString()}>{element}</li>
+          <li className='contenuEquipement' key={"equipement-"+index.toString()}>{element}</li>
         ))
     
 
     return (
-        <div className="main">
-        <div className='logement'>
+                <div className="main">
+                <div className='apartement'>
         
 
-                {/* carousel d'images */}
+                {/* affichage du carousel d'images */}
                 <Carousel pictures={record.pictures}/>
 
-                {/* 1 - affiche le titre, l'emplacement et les tags */}
-                <div className='ficheLogement'>
-                    <div className='div-description'>
+                {/*  affichage du titre, de l'emplacement et des tags */}
+                <div className='apartmentCard'>
+                    <div className='description'>
                         <h1>{record.title}</h1>
                         <h4>{record.location}</h4>
-                        <div className='div-tags'>
+                        <div className='tagsContent'>
                             { record.tags.map((element, index) => {
                                 return(<p className='tags' key={"tags-"+index}>{element}</p>)
                             })}
@@ -50,14 +49,14 @@ function Card() {
                     </div>
 
 
-                    {/* 2 - Affiche le nom du propriétaireet sa photo */}
-                    <div className='bloc-stars'>
+                    {/* affichage du nom du propriétaireet sa photo */}
+                    <div className='blocStars'>
                         <div className='div-etoiles'>
                             <p>{record.host.name}</p>
                             <img src={record.host.picture} alt={record.title} />
                         </div>
                         
-                        {/* 3 - Mets et colorie les étoiles */}
+                        {/* affichage des étoiles */}
                         <div className='stars'>
                             {
                                 arrayStars.map(element => {
@@ -70,7 +69,7 @@ function Card() {
                 </div>
 
 
-                {/* affiche la description et les équipements */}
+                {/* affichage de la description et les équipements */}
                 <div className='collapseLogement'>
                     <Collapse title="Description" content={record.description} />
                     <Collapse title="Equipements" content={equipements} />
@@ -83,3 +82,5 @@ function Card() {
 }
 
 export default Card
+
+

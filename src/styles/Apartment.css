@@ -1,4 +1,4 @@
- .logement {
+ .apartement {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -12,24 +12,24 @@
     height: auto;
 }
 
-.ficheLogement {
+.apartmentCard {
     display: flex;
     margin-top: 30px;
 }
 
-.ficheLogement h4 {
+.apartmentCard h4 {
     color: #FF6060;
     margin-top: 10px;
     font-size: 18px;
 }
 
-.ficheLogement h1 {
+.apartmentCard h1 {
     color: #FF6060;
     margin: 0;
     font-size: 36px;
 }
 
-.div-tags {
+.tagsContent {
     display: flex;
     white-space: nowrap;
     flex-wrap: wrap;
@@ -73,7 +73,7 @@
     box-shadow: 0px 0px 10px rgb(175, 136, 136);
 }
 
-.div-description {
+.description {
     width: 100%;
 }
 
@@ -86,7 +86,7 @@
 
 .span1 {
     color: #FF6060;
-    text-shadow: 0px 0px 5px rgb(180, 166, 166);
+
 }
 
 .span2 {
@@ -111,11 +111,11 @@
     flex-direction: column;
 }
 
-.ficheLogement{
+.apartmentCard{
     display: flex;
     flex-direction: column;
 }
-.bloc-stars{
+.blocStars{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
