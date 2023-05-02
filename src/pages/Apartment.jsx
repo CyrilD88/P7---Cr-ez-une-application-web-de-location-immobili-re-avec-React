@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 
 import Collapse from '../components/Collapse'
 import Carousel from '../components/Carousel'
+import PageError from '../pages/Error'
 
 import "../styles/Apartment.css"
 import Data from "../Données.json"
@@ -14,19 +15,21 @@ function Card() {
     const [searchParams] = useSearchParams();
 
      // récupération de l'ID de l'URL
-    const [apartmentID,] = useState(searchParams.get('_id'));
+    const [apartmentID] = useState(searchParams.get('_id'));
     
 
     // On recherche l'id dans le fichier logements.json
     const record = Data.find(element => element.id === apartmentID)
     
-   
+ // si l'URL n'est pas le bon on redirige la page d'erreur
+           if (!record) return(<PageError />)
 
     // Const pour maper les équipements
     const equipements = record.equipments.map((element, index) => (
           <li className='contenuEquipement' key={"equipement-"+index.toString()}>{element}</li>
         ))
     
+ 
 
     return (
                 <div className="main">
@@ -35,6 +38,7 @@ function Card() {
 
                 {/* affichage du carousel d'images */}
                 <Carousel pictures={record.pictures}/>
+               
 
                 {/*  affichage du titre, de l'emplacement et des tags */}
                 <div className='apartmentCard'>

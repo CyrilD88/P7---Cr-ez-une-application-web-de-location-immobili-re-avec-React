@@ -13,7 +13,7 @@ function ApartmentCards() {
     {Data.map((apart) => {
         const { id, cover, title } = apart;
 
-        // affichage de  la fiche logement sur la page d'accueil
+      // affichage de la description pour l'appartement sur la page d'accueil
         return (
             <div className="Logement" key={id}>
                 <Link to={{ pathname: "Apartment", search: "?_id="+id }}>
