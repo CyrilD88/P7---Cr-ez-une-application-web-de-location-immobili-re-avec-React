@@ -106,6 +106,10 @@
 
 @media (max-width: 768px){
 
+.main{
+    margin: 0 15px;
+}
+
 .collapseLogement{
     display: flex;
     flex-direction: column;
@@ -122,5 +126,15 @@
 }
 
 
+.stars{
+    font-size: 18px;
+    display: flex;
+   align-items: flex-end;
+}
 
+
+.div-etoiles img{
+    height: 45px;
+    width: 45px;
+}
 }

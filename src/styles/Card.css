@@ -54,3 +54,17 @@
 .Logement:hover {
     cursor: pointer;
 }
+
+/* média queries */
+
+@media (max-width: 768px){
+
+    .LogementsCard{
+        background: white;
+        padding: 0;
+      
+    }
+
+    
+    
+    }
